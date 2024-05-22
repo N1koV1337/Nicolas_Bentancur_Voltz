@@ -142,7 +142,7 @@ body, html {
 
 .logo {
     position: relative;
-    animation: glow-rotate 10s infinite alternate;
+    animation: glow-rotate 20s infinite alternate;
 }
 
 @keyframes glow-rotate {
