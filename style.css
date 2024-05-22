@@ -1,0 +1,161 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ocultar el desbordamiento para evitar barras de desplazamiento */
+    background-color: black; /* Fondo negro */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    color: white; /* Texto blanco */
+    position: relative; /* Posición relativa para la posición absoluta de la animación */
+    z-index: 1; /* Asegurar que el contenido aparezca por encima de la animación */
+}
+
+.header .logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    margin-top: 50px;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #ccc; /* Texto gris claro */
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.countdown-item {
+    margin: 0 10px;
+    text-align: center;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.countdown-number {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.countdown-label {
+    font-size: 1em;
+    color: #ccc; /* Texto gris claro */
+}
+
+.cta-button {
+    background-color: yellow; /* Botón amarillo */
+    color: black; /* Texto negro */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px); /* Mover ligeramente hacia arriba al pasar el cursor */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #ccc; /* Texto gris claro */
+}
+
+/* Estilos para las estrellas */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Asegurar que las estrellas estén detrás del contenido */
+    overflow: hidden; /* Ocultar cualquier estrella que se desborde */
+}
+
+.star {
+    position: absolute;
+    background-color: #ffffff; /* Color de las estrellas */
+    border-radius: 50%; /* Hacer que las estrellas sean círculos */
+    animation: twinkle 5s infinite;
+    opacity: 0; /* Las estrellas deben comenzar invisibles */
+}
+
+/* Animación de parpadeo */
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.logo {
+    position: relative;
+    animation: glow-rotate 10s infinite alternate;
+}
+
+@keyframes glow-rotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+        filter: brightness(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.5);
+        filter: brightness(1.5);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        filter: brightness(1);
+    }
+}

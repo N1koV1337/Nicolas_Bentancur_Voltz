@@ -1,16 +1,46 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>En Mantenimiento</title>
+    <title>Voltz - Maintenance</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> <!-- Mover aquí -->
 </head>
 <body>
+    <div class="stars">
+        <!-- Generar estrellas automáticamente con JavaScript -->
+    </div>
     <div class="container">
-        <div class="cinta"></div>
-        <h1>Sitio en Mantenimiento</h1>
-        <p>Estamos trabajando en mejoras. Vuelve pronto.</p>
-        <div class="cinta"></div>
+        <header class="header">
+            <img src="assets/Voltz2.png" alt="Voltz Logo" class="logo">
+        </header>
+        <main class="main-content">
+            <h1 class="title">We're Under Maintenance</h1>
+            <p class="description">Our website is currently undergoing maintenance to provide you with an enhanced experience. We'll be back shortly.</p>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span id="days" class="countdown-number">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours" class="countdown-number">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes" class="countdown-number">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds" class="countdown-number">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            <button class="cta-button">Notify Me</button>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2024 Voltz. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 </html>
